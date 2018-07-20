@@ -1,1 +1,1 @@
-start repo for the Aristos Project
+starter repo for the aristos marketplace

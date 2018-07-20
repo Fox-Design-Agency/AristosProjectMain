@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="<%= keywords %>">
+    <meta name="author" content="<%= author %>">
+
+    <title>Aristos CMS -
+        <%= title %>
+    </title>
+    <link rel="stylesheet" href="/styles/main.css" />
+</head>
+
+<body>
+    <nav class="">
+        <a class="" href="/">Aristos CMS</a>
+
+        <div class="">
+            <ul class="">
+                <% pages.forEach(function(page){ %>
+
+                    <% if (page.slug == "home"){ %>
+                        <li>
+                            <a class="" href="/">
+                                <%= page.title %>
+                            </a>
+                        </li>
+                        <% } else{ %>
+                            <li>
+                                <a class="" href="/<%= page.slug %>">
+                                    <%= page.title %>
+                                </a>
+                            </li>
+                            <% } %>
+                                <% }) %>
+
+            </ul>
+            <ul class="">
+                <% if (user) { %>
+                    <li>
+                        <a class="" href="/users/logout">Hi,
+                            <%= user.username %> ( Logout )</a>
+                    </li>
+                    <% } else{ %>
+                        <li>
+                            <a class="" href="/users/register">Register</a>
+                        </li>
+                        <li>
+                            <a class="" href="/users/login">Log in</a>
+                        </li>
+                        <% } %>
+                            <% if (user && user.admin == 1) { %>
+                                <li>
+                                    <a class="" href="/admin">Admin Area</a>
+                                </li>
+                                <% } %>
+            </ul>
+        </div>
+    </nav>
+
+    <main role="main" class="">
