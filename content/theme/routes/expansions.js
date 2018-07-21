@@ -5,3 +5,7 @@ const expansionsController = require("../controllers/expansions_controller");
 /*
 * GET exoansion index
 */
+router.get("/", expansionsController.index)
+
+
+module.exports = router;

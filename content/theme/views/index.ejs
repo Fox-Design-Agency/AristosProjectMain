@@ -1,6 +1,75 @@
 <% include _layouts/header %>
 
-<%- content %>
+<div class="large-hero">
+<% media.forEach(function(medias){ %>
+<% if (medias.category == "main-slider"){ %>
+    <img src="<%= medias.path %>" alt="<%= medias.alt %>">
+    <% } %>
+        <% }) %>
+        <div class="large-hero__text-content">
+<div class="wrapper">
+    <h1 class="large-hero__title">when anything is possible</h1>
+    <h2 class="large-hero__subtitle">What Will You Build?</h2>
+    <p class="large-hero__description">Start using Aristos Today!</p>
+    <p>
+        <a href="#getting-started" class="button button--large">Get Started</a>
+    </p>
+</div>
+</div>
+</div>
 
+<div class="page__section page__section--small-fixed-size">
+    <h2 id="getting-started" class="title__secondary title__secondary--light">Getting Started</h2>
+    <p>There's not an easy way right now to get started using Aristos</p>
+    <p>The <a href="https://foxdesignagency.com/" target="_blank">Fox Design Agency</a> is working on this.</p>
+    <p>Check out the project on <a href="https://github.com/Fox-Design-Agency/Aristos-CMS-node" target="_blank">Git Hub</a>
+</div>
+
+<div class="page__section page__section--light">
+<h2 class="title__secondary">Themes</h2>
+<div class="page__card-holder">
+<div class="card">
+some info will soon be here about themes
+</div>
+
+</div>
+</div>
+
+<div class="page__section page__section--blue">
+<h2 class="title__secondary">Expansions</h2>
+<div>
+<h3 class="title__tertiary">Upgrades</h3>
+<p>These folders are responsible for extending the base functionaly of the Aristos CMS. Currently accepted upgrade packages include:</p>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+
+</ul>
+
+</div>
+
+<div>
+<h3 class="title__tertiary">Plugins</h3>
+<p>These folders are responsible for extending Upgrades and the base functionality of the Aristos CMS. Currently accepted plugin packages include:</p>
+<ul>
+    <li>Printful - </li>
+
+</ul>
+</div>
+
+</div>
+
+
+<div class="page__section page__section--dark">
+<h2 class="title__secondary title__secondary--light">Get in Touch</h2>
+<p>Got some great ideas?</p>
+<p>Want your themes listed?</p>
+<p>Got an upgrade package you would like to share?</p>
+<a href="#" class="button button--large button--light open-modal">Let us know!</a>
+</div>
 
         <% include _layouts/footer %>

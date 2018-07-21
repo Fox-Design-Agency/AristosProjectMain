@@ -5,3 +5,7 @@ const aristosInfoController = require("../controllers/aristos_controller");
 /*
 * GET aristos information
 */
+router.get("/", aristosInfoController.index)
+
+
+module.exports = router;

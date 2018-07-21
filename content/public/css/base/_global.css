@@ -1,0 +1,30 @@
+body {
+  font-family: "Roboto", sans-serif;
+  color: $darkGreen;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: $darkGreen;
+  transition: color 0.3s ease-out;
+
+  &:hover {
+    color: $green;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+p, h1, h2, h3, h4, h5, h6{
+  cursor: default;
+}
+
+.open-modal {
+  cursor: pointer;
+}

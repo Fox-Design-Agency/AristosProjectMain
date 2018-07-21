@@ -1,0 +1,19 @@
+.title {
+  margin: 0;
+  font-size: 2rem;
+
+&--centered{
+    text-align: center;
+}
+&__main{
+  font-size: 2.25rem;
+  padding-top: 100px;
+}
+  &__secondary {
+    font-size: 2rem;
+
+    &--light {
+      color: $white;
+    }
+  }
+}

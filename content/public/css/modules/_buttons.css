@@ -1,0 +1,37 @@
+.button {
+  background-color: $mainBlue;
+  color: $white;
+  padding: 0.75rem 1.2rem;
+  display: inline-block;
+  transition: all 0.4s linear;
+  &:hover {
+    background-color: white;
+    box-shadow: 0 0 4px $mainBlue;
+    color: $mainBlue;
+  }
+
+  &--full {
+    width: 100%;
+    text-align: center;
+  }
+
+  &--large {
+    padding: 1.1rem 1.9rem;
+
+    @mixin atSmall {
+      font-size: 1.25rem;
+      padding: 1.1rem 1.9rem;
+    }
+  }
+
+  &--light {
+    background-color: $white;
+    color: $mainBlue;
+
+    &:hover {
+      background-color: $mainBlue;
+      box-shadow: 0 0 4px $white;
+      color: $white;
+    }
+  }
+}

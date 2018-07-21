@@ -1,0 +1,43 @@
+.page {
+  &__title {
+    text-align: center;
+    font-size: 30px;
+    font-weight: 900;
+    margin: 20px;
+    overflow: hidden;
+
+    &--padding-top {
+      padding-top: 100px;
+    }
+  }
+
+  &__section {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $lightGreen;
+        padding: 20px;
+
+        &--small-fixed-size{
+            height: 400px;
+        }
+    &--dark {
+      background: $green;
+    }
+
+    &--light {
+      background: $white;
+    }
+
+    &--blue{
+        background: $mainBlue;
+    }
+
+
+    & p{
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+  }
+}
