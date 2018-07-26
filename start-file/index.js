@@ -1,2 +1,0 @@
-/* do stuff in the shell to start stuff 
-    and stuff then delete this and stuff */

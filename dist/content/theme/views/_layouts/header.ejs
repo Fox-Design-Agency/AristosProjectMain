@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="<%= description %>">
+    <meta name="keywords" content="<%= keywords %>">
+    <meta name="author" content="<%= author %>">
+
+    <title>Aristos CMS -
+        <%= title %>
+    </title>
+     <link rel="stylesheet" href="/styles/theme-747926b9a9.css"/>
+</head>
+<body>
+    <nav class="header">
+        <a class="header__brand" href="/">Aristos Builder</a>
+            <ul class="header__navbar">
+                <% pages.forEach(function(page){ %>
+                    <% if (page.slug == "home"){ %>
+                        <li>
+                            <a class="" href="/">
+                                <%= page.title %>
+                            </a>
+                        </li>
+                    <% } else{ %>
+                        <% if(page.parent == "home"){ %>
+                            <li>
+                                <a class="" href="/<%= page.slug %>">
+                                    <%= page.title %>
+                                </a>
+                            </li>
+                        <% } %>
+                    <% } %>
+                <% }) %>
+                <li>
+                    <a class="open-modal">contact</a>
+                </li>
+            </ul>
+    </nav>
+<main role="main" class="">

@@ -11,37 +11,34 @@
     <title>Aristos CMS -
         <%= title %>
     </title>
-    <link rel="stylesheet" href="/styles/theme.css" />
+     <!-- build:css(content/temp) /styles/theme.css-->
+     <link rel="stylesheet" href="/styles/theme.css" />
+     <!-- endbuild -->
 </head>
-
 <body>
     <nav class="header">
         <a class="header__brand" href="/">Aristos Builder</a>
-
             <ul class="header__navbar">
                 <% pages.forEach(function(page){ %>
-
                     <% if (page.slug == "home"){ %>
                         <li>
                             <a class="" href="/">
                                 <%= page.title %>
                             </a>
                         </li>
-                        <% } else{ %>
-                            <% if(page.parent == "home"){ %>
+                    <% } else{ %>
+                        <% if(page.parent == "home"){ %>
                             <li>
                                 <a class="" href="/<%= page.slug %>">
                                     <%= page.title %>
                                 </a>
                             </li>
-                            <% } %>
-                            <% } %>
-                                <% }) %>
-                                <li>
-                                <a class="open-modal">contact</a>
-                                </li>
-
+                        <% } %>
+                    <% } %>
+                <% }) %>
+                <li>
+                    <a class="open-modal">contact</a>
+                </li>
             </ul>
     </nav>
-
-    <main role="main" class="">
+<main role="main" class="">
